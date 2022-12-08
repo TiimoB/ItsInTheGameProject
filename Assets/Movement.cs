@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector2 velocity = Vector2.zero;
         if (Input.GetKey(KeyCode.W ))
