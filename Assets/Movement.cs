@@ -14,16 +14,34 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 velocity = Vector2.zero;
-        if (Input.GetKey(KeyCode.W ))
+        // note: 1.6 isnt *exactly* right. but, its close enough to the point that it might as well be!
+        if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
+        {
+            velocity.x -= (int) (speed / 1.6);
+            velocity.y += (int) (speed / 1.6);
+        }
+        else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.W))
+        {
+            velocity.x += (int) (speed / 1.6);
+            velocity.y += (int) (speed / 1.6);
+        }else if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.S))
+        {
+            velocity.x -= (int) (speed / 1.6);
+            velocity.y -= (int) (speed / 1.6);
+        }else if (Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.S))
+        {
+            velocity.x += (int) (speed / 1.6);
+            velocity.y -= (int) (speed / 1.6);
+        }else if (Input.GetKey(KeyCode.W ))
         {
             velocity.y += speed ;
-        } if (Input.GetKey(KeyCode.S ))
+        } else if (Input.GetKey(KeyCode.S ))
         {
             velocity.y -= speed;
-        } if (Input.GetKey(KeyCode.A ))
+        } else if (Input.GetKey(KeyCode.A ))
         {
             velocity.x -= speed;
-        } if (Input.GetKey(KeyCode.D ))
+        } else if (Input.GetKey(KeyCode.D ))
         {
             velocity.x += speed;
         }
