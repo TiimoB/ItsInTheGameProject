@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -20,6 +21,11 @@ public class BulletScript : MonoBehaviour
         // unity's forward / right / up system is kind of weird in 2d,
         // but this is the magic line that moves us forward
         rb.velocity = -transform.right * speed;
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
