@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.HID;
 
-public class Movement : MonoBehaviour
+public class InputManager : MonoBehaviour
 {
     // Start is called before the first frame update
 
@@ -14,6 +16,8 @@ public class Movement : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 velocity = Vector2.zero;
+        Vector2 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
         // note: 1.6 isnt *exactly* right. but, its close enough to the point that it might as well be!
         if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.W))
         {
@@ -46,10 +50,26 @@ public class Movement : MonoBehaviour
             velocity.x += speed;
         }
 
-        rb.velocity = velocity;
+        rb.velocity = new Vector3(velocity.x, velocity.y, 0);
+
+        float angle = GetAngleTo(mousepos);
+        // Debug.Log(angle);
+        
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+
+        
 
     }
 
+    float GetAngleTo(Vector3 target)
+    {
+        Vector3 pos = rb.position;
+        double a = pos.x - target.x;
+        double b = pos.y - target.y;
+        
+        return (float) Math.Atan2(b, a) * Mathf.Rad2Deg;
+
+    }
   
 }
 
