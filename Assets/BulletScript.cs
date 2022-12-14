@@ -1,5 +1,4 @@
 using System;
-
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -33,8 +32,6 @@ public class BulletScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
-
     // Update is called once per frame
     void FixedUpdate()
     {
