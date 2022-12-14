@@ -352,7 +352,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &847187287
+
+--- !u!1 &892977299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 892977300}
+  m_Layer: 0
+  m_Name: SpawnPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &892977300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892977299}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.406, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1994365375}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1187413077
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -835,9 +867,11 @@ GameObject:
   - component: {fileID: 1994365374}
   - component: {fileID: 1994365376}
   - component: {fileID: 1994365378}
+
   - component: {fileID: 1994365380}
   - component: {fileID: 1994365379}
   m_Layer: 6
+
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -979,4 +1013,22 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+
+--- !u!114 &1994365378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994365373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80ac23170f313a84dbae543078e1c360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currGun: {fileID: 11400000, guid: 8983624377350db43a0c56adfad5799b, type: 2}
+  guns:
+  - {fileID: 11400000, guid: 8983624377350db43a0c56adfad5799b, type: 2}
+  bullet: {fileID: 4016522034365600951, guid: 21d9bff84b2ce4946bbb4d68d86f2516, type: 3}
+  bulletSpawn: {fileID: 892977299}
+
