@@ -1,3 +1,5 @@
+using System;
+
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -21,6 +23,17 @@ public class BulletScript : MonoBehaviour
         // but this is the magic line that moves us forward
         rb.velocity = -transform.right * speed;
     }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        Destroy(gameObject);
+    }
+
 
     // Update is called once per frame
     void FixedUpdate()
