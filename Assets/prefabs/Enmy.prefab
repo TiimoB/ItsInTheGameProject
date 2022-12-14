@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 737977732559204810}
   - component: {fileID: 2662012947705109312}
   - component: {fileID: 8292739004434003003}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enmy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72caef7b06a3c02438387ff09aeb677b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 4
   rb: {fileID: 2662012947705109312}
 --- !u!50 &2662012947705109312
 Rigidbody2D:
@@ -132,7 +132,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

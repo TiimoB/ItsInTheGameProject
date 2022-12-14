@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -24,5 +26,19 @@ public class Enemy : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, angle);
         rb.velocity = -transform.right * speed;
 
+    }
+    
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.name.Equals("Player"))
+        {
+            // decrease health
+        }
+        else
+        {
+            PointManager.instance.incrementPoints();
+        }
+        
+        Destroy(gameObject);
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = System.Random;
@@ -27,8 +28,8 @@ public class EnemyManager : MonoBehaviour
             // spawn enemy
             spawnEnemy();
             _lastSpawn = Time.time;
-            Debug.Log("Spawned");
         }
+
     }
 
     private void spawnEnemy()
@@ -64,4 +65,6 @@ public class EnemyManager : MonoBehaviour
 
         Instantiate(enemy, spawnPos, quaternion.identity);
     }
+
+
 }
