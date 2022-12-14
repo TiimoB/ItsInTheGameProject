@@ -383,7 +383,7 @@ Transform:
   m_Father: {fileID: 1994365375}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1187413077
+--- !u!1 &1358324621
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -391,37 +391,52 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1187413079}
-  - component: {fileID: 1187413078}
+  - component: {fileID: 1358324624}
+  - component: {fileID: 1358324623}
+  - component: {fileID: 1358324622}
   m_Layer: 0
-  m_Name: CursorManager
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1187413078
+--- !u!114 &1358324622
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187413077}
+  m_GameObject: {fileID: 1358324621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07bd1c714396f5d4a89b93dd229eacaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 709802394704199427, guid: 479a2ddebebce3740854981bdc8456f5, type: 3}
+  spawnDelay: 2.3
+--- !u!114 &1358324623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358324621}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73161c8349f7dc1448e21f9ff4ecb522, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cursor: {fileID: 2800000, guid: 9ad165823bc50c742be86f7cfdd9d4c5, type: 3}
---- !u!4 &1187413079
+--- !u!4 &1358324624
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1187413077}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.2526374, y: -0.17267875, z: 0.018520992}
+  m_GameObject: {fileID: 1358324621}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.8709018, y: -2.1025116, z: -0.11257744}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
