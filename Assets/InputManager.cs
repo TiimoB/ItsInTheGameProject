@@ -10,8 +10,9 @@ public class InputManager : MonoBehaviour
     // Start is called before the first frame update
 
     [SerializeField] private int speed;
+
     [SerializeField] private Rigidbody2D rb;
-    
+
     // Update is called once per frame
     void FixedUpdate()
     {

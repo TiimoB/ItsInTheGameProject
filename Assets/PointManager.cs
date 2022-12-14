@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class PointManager : MonoBehaviour
 {
+
     public static PointManager Instance;
+
     public int points { get; private set; } // Start is called before the first frame update
     
     private void Awake()
     {
+
         if (Instance != null && Instance != this)
         {
             Destroy(Instance);
@@ -16,13 +19,16 @@ public class PointManager : MonoBehaviour
         }
 
         Instance = this;
+
     }
 
 
     public void incrementPoints()
     {
         points += 1; 
+
         UIManager.Instance.UpdateUi();
+
     }
     void Start()
     {

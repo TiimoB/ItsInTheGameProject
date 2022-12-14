@@ -32,7 +32,6 @@ public class BulletScript : MonoBehaviour
     {
         Destroy(gameObject);
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
