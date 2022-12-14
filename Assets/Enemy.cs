@@ -32,13 +32,14 @@ public class Enemy : MonoBehaviour
     {
         if (collider.name.Equals("Player"))
         {
-            // decrease health
+            HealthManager.Instance.takeDamage(10);            Destroy(gameObject);
+            Destroy(gameObject);
         }
-        else
+        else if (collider.GetComponent<BulletScript>() != null)
         {
-            PointManager.instance.incrementPoints();
+            PointManager.Instance.incrementPoints();
+            Destroy(gameObject);
         }
         
-        Destroy(gameObject);
     }
 }

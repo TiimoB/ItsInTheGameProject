@@ -1,40 +1,54 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI points;
-    public static UIManager instance { get; private set; }
-    // Start is called before the first frame update
-
+    [SerializeField] private Image healthBar;
+    [SerializeField] private Gradient healthbarGradient;
+    [SerializeField] private GameObject gameOverScreen;
+    
+    public static UIManager Instance { get; private set; }
     private void Awake()
     {
-        if (instance != null && instance != this)
+        healthBar.color = healthbarGradient.Evaluate(0);
+
+        if (Instance != null && Instance != this)
         {
-            Destroy(instance);
+            Destroy(Instance);
             return;
         }
 
-        instance = this;
+        Instance = this;
     }
 
-    public void updateUi()
+    public void UpdateUi()
     {
-        String score = "Points: " + PointManager.instance.points;
+        float progress = HealthManager.Instance.health / (float)HealthManager.Instance.maxHealth;
+        healthBar.fillAmount = progress;
+        healthBar.color = healthbarGradient.Evaluate(1 - progress);
+        
+        String score = "Points: " + PointManager.Instance.points;
         points.text = score;
     }
 
-    void Start()
+    public void Retry()
     {
-        
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name); 
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Quit()
     {
-        
+        Application.Quit();
+    }
+
+    public void GameOver()
+    {
+        gameOverScreen.SetActive(true);
     }
 }
