@@ -1499,6 +1499,7 @@ GameObject:
   - component: {fileID: 1358324626}
   - component: {fileID: 1358324625}
   - component: {fileID: 1358324627}
+  - component: {fileID: 1358324628}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -1616,6 +1617,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 286d3e02ac3c6ec479719c624bf02655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isInvincible: 0
+--- !u!114 &1358324628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358324621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe667ee34fbdb5d429a892bb6898d960, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 9
+  height: 5
+  spawnDelay: 10
+  pickups:
+  - {fileID: 3073351794067123079, guid: 9cc6b52877df7cd4c9f435f9f2b80cba, type: 3}
+  - {fileID: 5417576586549999028, guid: 5174eb1a86ca6c04a9a495006265b4f5, type: 3}
+  - {fileID: 3123315960357192916, guid: b23525e923a328d46afea98938979212, type: 3}
 --- !u!1 &1452979896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2095,9 +2116,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ac23170f313a84dbae543078e1c360, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currGun: {fileID: 11400000, guid: 8983624377350db43a0c56adfad5799b, type: 2}
+  _currGun: 0
   guns:
   - {fileID: 11400000, guid: 8983624377350db43a0c56adfad5799b, type: 2}
+  - {fileID: 11400000, guid: 08c1e4cb965377548b1c19149e746139, type: 2}
   bullet: {fileID: 4016522034365600951, guid: 21d9bff84b2ce4946bbb4d68d86f2516, type: 3}
   bulletSpawn: {fileID: 892977299}
 --- !u!58 &1994365379
