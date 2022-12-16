@@ -30,7 +30,12 @@ public class BulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Destroy(gameObject);
+
+        if (col.GetComponent<Enemy>() != null)
+        {
+            Destroy(gameObject);
+        }
+        
     }
     // Update is called once per frame
     void FixedUpdate()
