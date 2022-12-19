@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 709802394704199427, guid: 479a2ddebebce3740854981bdc8456f5, type: 3}
-  spawnDelay: 2.3
+  spawnDelay: 0.64
 --- !u!114 &1358324623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1630,9 +1630,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe667ee34fbdb5d429a892bb6898d960, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 9
-  height: 5
-  spawnDelay: 10
+  width: 8
+  height: 4
+  spawnDelay: 30
   pickups:
   - {fileID: 3073351794067123079, guid: 9cc6b52877df7cd4c9f435f9f2b80cba, type: 3}
   - {fileID: 5417576586549999028, guid: 5174eb1a86ca6c04a9a495006265b4f5, type: 3}
