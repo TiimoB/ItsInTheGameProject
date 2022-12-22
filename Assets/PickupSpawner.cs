@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,13 @@ public class PickupSpawner : MonoBehaviour
     [SerializeField] private int height;
     [SerializeField] private float spawnDelay;
     [SerializeField] private GameObject[] pickups;
-    private float _nextSpawn = 0;
+    private float _nextSpawn;
 
-    // Start is called before the first frame update
-    
+    private void Start()
+    {
+        _nextSpawn = Time.time + spawnDelay;
+    }
 
-    // Update is called once per frame
     void Update()
     {
         if (Time.time > _nextSpawn)

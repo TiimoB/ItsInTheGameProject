@@ -8,6 +8,8 @@ public class PointManager : MonoBehaviour
     public static PointManager Instance;
 
     public int points { get; private set; } // Start is called before the first frame update
+    [SerializeField] private int scoreToWin;
+    [SerializeField] private GameObject exit;
     
     private void Awake()
     {
@@ -25,19 +27,13 @@ public class PointManager : MonoBehaviour
 
     public void incrementPoints()
     {
-        points += 1; 
-
+        points += 1;
         UIManager.Instance.UpdateUi();
+        if (points >= scoreToWin)
+        {
+            exit.gameObject.SetActive(true);
+        }
 
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 }
